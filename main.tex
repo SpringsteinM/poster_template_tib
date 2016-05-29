@@ -1,0 +1,89 @@
+\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+\mode<presentation>{\usetheme{tibposter}}
+\usepackage[orientation=portrait,size=a1,scale=1.4,debug]{beamerposter}
+%\usepackage{ngerman}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} %damit \textit und \textbf in beamerclass funktionieren
+\usepackage{exscale} %vernünfige Scalierung des Summenzeichens
+\usepackage{amsmath,amsthm, amssymb, latexsym}%--- Schnipp ---
+\usepackage{array,booktabs,tabularx}
+\usepackage{etex} %Erhöht Anzahl von "Registern"; wegen Fehlermeldung "! No room for a new \dimen .\ch@ck ...\else \errmessage {No room for a new #3}"
+%\usepackage[x11names]{xcolor}
+\usepackage{xfrac}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{url}
+\usepackage[numbers]{natbib}
+%\usepackage{tocstyle}
+
+\usepackage[printonlyused,nolist]{acronym}
+\usepackage{siunitx}
+
+\sisetup{round-mode=places,round-precision=1}
+\usepackage{url}
+\usepackage{hyphenat}
+
+%\usepackage[backend=biber,bibencoding=utf8,style=numeric,%sortcites=true,
+%sorting=none,
+%url=false]{biblatex}
+	%\renewbibmacro{in:}{%
+  %\ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}} %%% 'In:' bei Artikel-Zitation unterbinden
+	\setbeamertemplate{caption}[numbered]
+\usepackage{caption3}
+	\captionsetup{format=hang, justification=raggedright,labelformat = simple, singlelinecheck = false} %, width = 0.44\textwidth
+	\setbeamertemplate{caption}[caption3]
+%
+%\addto\captionsenglish{\renewcommand{\figurename}{Abb.}}
+%\addto\captionsenglish{\renewcommand{\tablename}{Tab.}}
+\usepgfplotslibrary{fillbetween}
+
+\begin{acronym}
+  \acro{CNN}{convolutional neural networks}
+  \acro{GPU}{graphics processing unit}
+  \acro{SGD}{stochastic gradient descent}
+  \acro{ReLU}{rectified linear units}
+  \acro{tf-idf}{term frequency and inverse document frequency}
+  \acro{API}{application programming interface}
+  \acro{LDA}{Latent Dirichlet allocation}
+  \acro{HOG}{histogram of oriented gradients}
+  \acro{SIFT}{scale-invariant feature transform}
+  \acro{SVM}{support vector machine}
+  \acro{IFV}{improved Fisher vector}
+  \acro{BoVW}{bag-of-visual-words}
+  \acro{ILSVRC}{ImageNet Large Scale Visual Recognition Challenge}
+  \acro{VOC}{Visual Object Classes}
+\end{acronym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{figures/}}
+
+\title{On the Effects of Spam Filtering and Incremental Learning for Web-Supervised Visual Concept Classification}
+\author{Matthias Springstein$^{1}$, Ralph Ewerth$^{1,2}$}
+\institute{$^{1}$German National Library of Science and Technology (TIB)\\ $^{2}$Leibniz Universit\"at Hannover, Faculty of Electrical Engineering and Computer Science}
+\date[August 2015]{August 2015}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\columnheight}
+\setlength{\columnheight}{105cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}
+	\begin{columns}
+	  \begin{column}{.49\textwidth}
+			\begin{block}{Introduction}
+
+			\end{block}
+		\end{column}
+
+	  \begin{column}{.49\textwidth}
+			\begin{block}{Introduction}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+\end{document}

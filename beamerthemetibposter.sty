@@ -1,0 +1,131 @@
+\RequirePackage{tikz, xcolor, textpos, calc}
+
+\usetikzlibrary{shapes.geometric}
+
+
+% Colour settings
+
+\definecolor{TIB_red}{RGB}{194, 18, 34}
+\definecolor{TIB_gray}{RGB}{85, 85, 85}
+
+\setbeamercolor*{alerted text}{fg=TIB_red}
+\setbeamercolor*{caption}{fg=TIB_gray}
+\setbeamercolor*{caption name}{fg=TIB_gray}
+\setbeamercolor*{description item}{fg=TIB_gray}
+\setbeamercolor*{footline}{fg=TIB_gray}
+\setbeamercolor*{frametitle}{fg=TIB_red}
+\setbeamercolor*{item}{fg=TIB_gray}
+\setbeamercolor*{normal text}{fg=TIB_gray}
+\setbeamercolor*{section in toc}{fg=TIB_gray} % Why don't you work? Link colour must be adapted
+\setbeamercolor*{subsection in toc}{fg=TIB_gray} % Why don't you work? Link colour must be adapted
+\setbeamercolor*{separation line}{fg=TIB_gray}
+\setbeamercolor*{structure}{fg=TIB_gray} % might be redundant to item list et al.
+\setbeamercolor*{subitem}{fg=TIB_gray}
+\setbeamercolor*{subsubitem}{fg=TIB_gray}
+\setbeamercolor*{title}{fg=TIB_red}
+
+%
+
+\setbeamercolor{headline}{fg=TIB_red,bg=white}
+\setbeamercolor{footline}{fg=white, bg=TIB_red}
+\setbeamerfont{footline}{size=\large,series=\tt}
+\setbeamercolor{separation line}{bg=TIB_red}
+\setbeamercolor{title in headline}{fg=TIB_red}
+\setbeamercolor{author in headline}{fg=black}
+\setbeamercolor{institute in headline}{fg=TIB_red}
+
+\setbeamercolor{framesubtitle}{fg=black, bg=TIB_red}
+\setbeamercolor{author in head/foot}{fg=black, bg=TIB_red}
+\setbeamercolor{title in head/foot}{fg=black, bg=TIB_red}
+
+\setbeamercolor*{normal text}{fg=black, bg=white}
+\setbeamercolor*{block body}{bg=gray!20,fg=black}
+\setbeamercolor*{block title}{fg=white,bg=TIB_red}
+\setbeamerfont{block title}{size=\large,series=\bf}
+\setbeamercolor{upper separation line head}{fg=TIB_red}
+
+% Font settings
+
+\setbeamerfont*{author}{size=\normalsize, series=\bfseries}
+\setbeamerfont*{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont*{subtitle}{size=\Large, series=\bfseries}
+\setbeamerfont*{title}{size=\Large, series=\bfseries}
+
+% Inner theme
+
+\setbeamertemplate{itemize items}[square]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{headline}{}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{subsection in toc}[square]
+
+% Outer theme
+
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[ht=3.5ex,dp=0.5ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}%
+    {\vspace{-0.5ex}\phantom{g/}
+		\insertblocktitle}% phantom because of baseline problem
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[leftskip=1em,colsep*=.75ex,sep=0.5ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{headline}{
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.67\paperwidth}
+        \vskip4ex
+        %\raggedleft
+				\raggedright
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[4ex]}
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\normalsize{\insertinstitute}\\[0.5ex]}
+      \end{column}
+      \begin{column}{.00\paperwidth}
+      \end{column}
+      \begin{column}{.27\paperwidth}
+        \vskip8ex
+        \begin{center}
+          	\includegraphics[width=\linewidth]{tib/logo_all}%
+        \end{center}
+        \vskip2ex
+      \end{column}
+      \begin{column}{.02\paperwidth}
+      \end{column}
+    \end{columns}
+    \vskip2ex
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+}
+% \setbeamertemplate{footline}{
+%   \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+%     \rule{0pt}{3pt}
+%   \end{beamercolorbox}
+%
+%   \leavevmode%
+%   \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
+%     \texttt{\textcolor{white}{}}
+%     \hfill
+%     \texttt{\textcolor{white}{tobias.weise@fh-jena.de}}
+%     \vskip1ex
+%   \end{beamercolorbox}
+%   \vskip0pt%
+%   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+%     \rule{0pt}{3pt}
+%   \end{beamercolorbox}
+% }
